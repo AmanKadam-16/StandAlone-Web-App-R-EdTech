@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R-Edification - Educational Platform</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Favicon (optional, create a simple one or use your brand's) -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="spinner"></div>
+        <h2>Loading R-Edification Platform...</h2>
+        <p>Preparing your learning experience.</p>
+    </div>
+
+    <!-- Main Application Container -->
+    <div id="appContainer" style="display: none;">
+        <header class="app-header">
+            <div class="logo-container">
+                <!-- <img src="./assets/images/logo.png" alt="R-Edification Logo" class="logo-img"> -->
+                <span class="brand-name">R-Edification</span>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn focusable" data-page="home" tabindex="0">Home</button>
+                <button class="nav-btn focusable" data-page="license" tabindex="0">License</button>
+                <button class="nav-btn focusable" data-page="about" tabindex="0">About Us</button>
+                <button class="nav-btn focusable" data-page="help" tabindex="0">Help</button>
+            </nav>
+        </header>
+
+        <main id="pageContent" class="page-content">
+            <div id="breadcrumbsContainer" class="breadcrumbs-container">
+                <!-- Breadcrumbs will be populated here by JS -->
+            </div>
+            <div id="dynamicContent" class="dynamic-content">
+                <!-- Main content (classes, units, chapters, videos, static pages) will be rendered here -->
+            </div>
+            <div id="errorDisplay" class="error-display-container">
+                <!-- Errors will be shown here -->
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>© <span id="currentYear"></span> R-Edification. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal" class="video-player-modal">
+        <div class="video-player-container">
+            <div class="video-player-header">
+                <h3 id="currentVideoTitleModal">Video Title</h3>
+                <button class="close-btn focusable" id="closePlayerBtnModal" tabindex="0">×</button>
+            </div>
+            <video id="videoPlayer" class="video-player" controls preload="metadata" controlsList="nodownload">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls-info">
+                <p>Use video controls to play/pause. Press ESC to close player.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

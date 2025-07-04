@@ -75,7 +75,7 @@ body {
 /* Main Application Container */
 #appContainer {
     width: 100%;
-    max-width: 1400px; /* Max width for larger screens */
+    max-width: 1920px; /* Max width for larger screens */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
